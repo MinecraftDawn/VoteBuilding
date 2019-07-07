@@ -1,0 +1,11 @@
+version: 0.0.0
+main: main.Vote
+name: Vote
+Author: MinecraftDawn
+
+commands:
+  vote:
+
+permissions:
+  setVoteSign:
+    default: op
