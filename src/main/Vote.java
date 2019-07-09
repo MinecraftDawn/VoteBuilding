@@ -58,7 +58,11 @@ public class Vote extends JavaPlugin {
         int i = 0;
         while (i < 5 && i < list.size()) {
             Data d = (Data) list.get(i);
-            sender.sendMessage(d.name + "       "+ d.point);
+            String name = d.name;
+            for (int j = 0; j < 15 - d.name.length(); j++) {
+                name += " ";
+            }
+            sender.sendMessage(name + d.point);
             i++;
         }
         return true;
