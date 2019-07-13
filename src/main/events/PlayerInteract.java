@@ -1,6 +1,7 @@
 package main.events;
 
 import main.Vote;
+import org.bukkit.ChatColor;
 import org.bukkit.Color;
 import org.bukkit.block.Block;
 import org.bukkit.block.Sign;
@@ -31,9 +32,9 @@ public class PlayerInteract implements Listener {
                     if (new Date().getTime() / 1000 - config.getInt(e.getPlayer().getName()) > 86400) {
                         config.set(configName, config.getInt(configName) + 1);
                         config.set(e.getPlayer().getName(),new Date().getTime()/1000);
-                        e.getPlayer().sendMessage(Color.BLUE + "你成功投票給了 " + sign.getLine(1));
+                        e.getPlayer().sendMessage(ChatColor.BLUE + "你成功投票給了 " + sign.getLine(1));
                     }else{
-                        e.getPlayer().sendMessage(Color.BLUE + "投票冷卻中");
+                        e.getPlayer().sendMessage(ChatColor.BLUE + "投票冷卻中");
                     }
 
                 }
